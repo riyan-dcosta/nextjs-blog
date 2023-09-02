@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   return (
@@ -132,6 +133,7 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
+      <Analytics />
     </div>
   );
 }
