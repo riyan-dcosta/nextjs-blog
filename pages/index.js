@@ -1,24 +1,46 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import Script from "next/script";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Riyan Dcosta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Script>
+        {/* 
+        src="https://connect.facebook.net/en_US/sdk.js" strategy="lazyOnload"
+        onLoad=
+        {() =>
+          console.log(`script loaded correctly, window.FB has been populated`)
+        }
+         */}
+      </Script>
 
       <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <h1 className={styles.title}>Welcome to my profile.</h1>
 
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <p className={styles.description}>My Arsenal :</p>
+        <ul className={styles.codeBlock}>
+          <li>
+            <code>Flutter</code>
+          </li>
+          <li>
+            <code>NextJs</code>
+          </li>
+          <li>
+            <code>Jetpack Compose</code>
+          </li>
+        </ul>
 
         <div className={styles.grid}>
+          <Link href={"/flutter/flutter_example"} className={styles.card}>
+            <h3>Flutter Example &rarr;</h3>
+            <p>My Flutter project hoted in react web app</p>
+          </Link>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -55,7 +77,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
       </footer>
@@ -111,5 +133,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }

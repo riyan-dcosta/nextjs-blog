@@ -33,6 +33,13 @@
   text-align: center;
 }
 
+.codeBlock,
+.codeBlock ul li code {
+  /* background-color: red; */
+  align-items: start;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
 
 .description {
   line-height: 1.5;
